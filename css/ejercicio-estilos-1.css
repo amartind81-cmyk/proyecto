@@ -1,0 +1,13 @@
+        #ultimoParrafo{
+            background-color: beige; 
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{ color:greenyellow;
+            background-color: 
+            blue;
+            font-size: 22px;
+        }
+        p{font-family: Georgia, 'Times New Roman', Times, serif;
+        
+        }
+        p, span {font-family: Georgia, 'Times New Roman', Times, serif;}

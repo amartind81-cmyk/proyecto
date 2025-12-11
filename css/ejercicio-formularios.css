@@ -1,0 +1,66 @@
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c4a72;
+            margin-bottom: 10px;
+        }
+
+        .form-container {
+            width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 2px solid #4a6fa5;
+            margin-top: 0px;
+            padding-top: 10px;
+            position: relative; /* Necesario para que .form-title absolute funcione */
+        }
+
+        .form-title {
+            position: absolute;
+            top: -14px;
+            left: 20px;
+            background: #f0f2f5;
+            padding: 0 10px;
+            font-weight: bold;
+            color: #2c4a72;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 12px;
+            display: block;
+        }
+
+        input[type="text"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #4a6fa5;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }

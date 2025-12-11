@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inteligencias Artificiales</title>
+    <!--css externo-->
+    <link rel="stylesheet" href="./../css/ejercicio-ia.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-zona">
+        <img src="./../img/etiquetas-semanticas/icon-title.svg" alt="logo">
+        <h1>Información Inteligencias Artificiales</h1>
+    </div>
+
+</header>
+
+<nav>
+    ChatGPT • Gemini • Claude • Copilot
+</nav>
+
+<div id="contenedor">
+
+    <aside>
+        <h3>IAs</h3>
+        <a onclick="mostrar('chatgpt')">ChatGPT</a>
+        <a onclick="mostrar('gemini')">Gemini</a>
+        <a onclick="mostrar('claude')">Claude</a>
+        <a onclick="mostrar('copilot')">Copilot</a>
+    </aside>
+
+    <main id="main">
+        <h2>Bienvenido</h2>
+        <p>Haz clic en una IA del menú de la izquierda para ver información aquí.</p>
+    </main>
+
+</div>
+
+<footer>
+    Información Extraída de Wikipedia
+</footer>
+
+<script>
+    function mostrar(ia) {
+        const contenido = {
+            chatgpt:
+                `<h2>ChatGPT</h2>
+                 <p>Modelo conversacional avanzado diseñado para asistirte en tareas de texto y creatividad.</p>`,
+
+            gemini:
+                `<h2>Gemini</h2>
+                 <p>IA de Google centrada en análisis de datos, razonamiento y capacidades multimodales.</p>`,
+
+            claude:
+                `<h2>Claude</h2>
+                 <p>Modelo de Anthropic que prioriza seguridad y respuestas útiles altamente detalladas.</p>`,
+
+            copilot:
+                `<h2>Copilot</h2>
+                 <p>Asistente inteligente integrado en Windows y herramientas de Microsoft, ideal para productividad.</p>`
+        };
+
+        document.getElementById("main").innerHTML = contenido[ia];
+    }
+</script>
+
+</body>
+</html>
+
+
+

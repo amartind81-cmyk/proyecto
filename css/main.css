@@ -1,0 +1,92 @@
+  body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0b0f13;
+    color:white;
+  }
+
+  header{
+    height: 10vh;
+    width: 100vw;
+    background:#0f1720;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border-bottom:1px solid #222;
+  }
+
+  header img {
+    width:50px;
+    height:50px;
+    border-radius:10px;
+  }
+  
+  h1 {
+    font-size:25px;
+    margin:0;
+  }
+  
+  .container{
+      display:flex;
+      padding:15px;
+      gap:15px;
+  }
+  
+  aside{
+    height: 60vh;
+      width:12vw;
+      background:#111822;
+      padding:10px;
+      border-radius:10px;
+      border:1px solid #222;
+  }
+    
+  aside a{
+    display:block;
+    color:#ccc;
+    margin-bottom:10px;
+    text-decoration:none;
+  }
+
+  aside a:hover {
+    color:#6ee7b7;
+  }
+
+  main{
+    flex-grow:1;
+    background:#111822;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #222;
+  }
+
+  details {
+      background:#0f1720;
+      padding:10px;
+      border-radius:8px;
+      margin-bottom:10px;
+  }
+
+  summary{
+    cursor:pointer;
+  }
+
+  .project-list a{
+    display:block;
+    background:#0f1720;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:8px;
+    color:white;
+    text-decoration:none;
+    border:1px solid #222;
+  }
+    
+  footer{
+    padding:10px;
+    text-align:center;
+    color:#888;
+    border-top:1px solid #222;
+    margin-top:20px;
+  }

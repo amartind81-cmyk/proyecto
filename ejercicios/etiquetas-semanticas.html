@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Etiquetas semánticas </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="Andres">
+    <meta name="Description" content="proyecto de prueba sobre etiquetas semánticas">
+    <meta name="Keywords" content="Donoso, proyectos, HTML">
+
+    <!--css externo-->
+    <link rel="stylesheet" href="./../css/ejercicio-etiquetas-semanticas.css">
+    <!--icono title-->
+    <link rel="shortcut icon" href="./../img/logo-title/logo-title-etiquetas-semanticas.svg"  type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!--header-->
+    <div class="header">
+        <img src="./../img/etiquetas-semanticas/logo.jpg" alt="Logo Aleatorio" width="100vw" height="100vh">
+        <h1>IES DONOSO CORTÉS</h1>   
+        <a href="https://wa.me/?text=¡Mira%20este%20sitio!%20https://amartind81-cmyk.github.io/amartind81.github.io/" target="_blank">
+            <img src="./../img/etiquetas-semanticas/icon-WhatsApp.svg" 
+            alt="Compartir en WhatsApp"
+            style="width:50px; height:50px; float:right">
+        </a>
+    </div>
+
+    <br> <!--salto para div siguiente-->
+
+    <!--nav-->
+    <div class="nav">
+        <h2>Tareas HTML</h2>
+        <ul>
+            <li><a href="./divs-bolitas.html">Circulos</a></li>
+            <li><a href="./divs.html">Cuadrados con DIV</a></li>
+            <li><a href="./mapa-sensible.html">Mapa sensible</a></li>          
+        </ul>
+    </div>
+
+    <br> <!--salto para div siguiente-->
+
+    <!--aside-->
+    <div class="aside">
+        <h2>Sitios de interés</h2>
+        <br>
+        <!--imagen DONOSO-->
+        <a href="https://iesdonosocortes.educarex.es/" title="IES Donoso Cortés">
+            <img src="./../img/etiquetas-semanticas/logo-donoso.jpg" alt="Logo Donoso" width="100vw" height="100vh">
+        </a>    
+
+        <br>
+        <!--imagen JUNTA-->
+        <a href="https://www.juntaex.es/" title="Junta de Extremadura">
+            <img src="./../img/etiquetas-semanticas/junta-logo.png" alt="Logo Donoso" width="90vw" height="95vh">
+        </a>  
+    </div>
+
+    <br> <!--salto para div siguiente-->
+
+    <!--body derecha-->
+    <div class="body-right">
+        <h2>¿Qué es DHCP?</h2>
+        <br>
+        <p>
+            <details>
+                <summary>Definición de DHCP</summary>
+
+            DHCP (Dynamic Host Configuration Protocol) es un protocolo de red que permite a los dispositivos obtener automáticamente una dirección IP y otros parámetros de configuración necesarios para comunicarse en una red. Fue desarrollado para simplificar la administración de direcciones IP en redes grandes, evitando la necesidad de asignar manualmente direcciones a cada dispositivo.
+            </details>
+        </p>
+        <br>
+        <p>
+            <details>
+                <summary>Como actúa DHCP</summary>
+
+            Cuando un dispositivo se conecta a una red que utiliza DHCP, envía una solicitud de configuración (conocida como DHCPDISCOVER) para obtener una dirección IP. Un servidor DHCP en la red responde con una oferta (DHCPOFFER) que incluye una dirección IP disponible y otros parámetros de configuración, como la máscara de subred, la puerta de enlace predeterminada y los servidores DNS. El dispositivo acepta la oferta enviando un mensaje de solicitud (DHCPREQUEST), y el servidor confirma la asignación con un mensaje de confirmación (DHCPACK). La dirección IP asignada tiene un tiempo limitado (conocido como "lease"), después del cual el dispositivo debe renovar la asignación o solicitar una nueva dirección.
+
+            </details>
+        </p>
+
+    </div>
+
+    <br> <!--salto para div siguiente-->
+
+    <!--Pie de pagina-->
+    <div class="footer">
+        <p>Contacto con el centro: 924 02 18 24</p>
+        <br>
+        <p>Contacto con la Junta de Extremadura (Don Benito): 924 02 14 80 </p>
+    </div>
+
+</body>
+</html>

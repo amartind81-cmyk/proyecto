@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body { 
+            margin: 5px; 
+            padding: 20px; 
+            font-family: Arial, sans-serif; 
+            transition: background-color 0s, color 0s; 
+        }
+        
+        body.light {
+            background: white; 
+            color: black; 
+        }
+        
+        body.dark { 
+            background: #121212; 
+            color: white; 
+        }
+        
+        .theme-btn {
+            position: fixed; /*Fija el botón en la pantalla para que no desaparezca al descender*/
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #sun { 
+            display: none; 
+        }
+
+        .parrafo1 {
+            color:yellow;
+            font-style: oblique;
+        }
+
+        /*Creada en clase*/
+        .clase-coleccion {
+            color: red;
+            background-color: pink;
+            font-size: 18px;
+        }
+
+        .pointer-wait {
+            cursor: wait; /*cursor de carga*/
+        }
+
+        .pointer-crosshair {
+            cursor: crosshair; /*cursor de cruz*/
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Ejercicio de JavaScript</h1>
+
+    <!--EJERCICIO DE CAMBIAR TEXTO-->
+    <h2>Cambia el texto</h2>
+    <p id="saludo">Hola buenos días</p>
+    <button class="pointer-wait" onclick='
+        document.getElementById("saludo").innerHTML = "Hoy vamos a hacer ejercicios de JavaScript"';>Haz click
+    </button>
+
+    <br>
+
+    <!--EJERCICIO DE CARAS-->
+    <h2>Cambia la cara</h2>
+    
+    <!--Imagen--> 
+    <img id="myImage" style="width: 100px;">
+    
+    <br>
+
+    <!--Boton para poner la cara triste-->
+    <button onclick="document.getElementById('myImage').src='./../img/caras/cara-triste.png'">Triste</button>
+
+    <br>
+
+    <!--Boton para poner la cara feliz-->
+    <button onclick="document.getElementById('myImage').src='./../img/caras/cara-feliz.png'">Contenta</button>
+
+    <br>
+
+    <!--Boton para poner la cara neutra-->
+    <button onclick="document.getElementById('myImage').src='./../img/caras/cara-neutra.png'">Normal</button>
+
+    <br>
+
+    <!--EJERCICIO DIA/NOCHE-->
+    <button id="moon" class="theme-btn" onclick="document.body.className = 'dark';
+        document.getElementById('moon').style.display = 'none';
+        document.getElementById('sun').style.display = 'block';">🌙</button>
+
+    <button id="sun" class="theme-btn" onclick="document.body.className = 'light';
+        document.getElementById('sun').style.display = 'none';
+        document.getElementById('moon').style.display = 'block';">☀️</button>
+
+    <!--EJERCICIO DESAPARECER ARBOL-->
+    <h2>Desaparecer el arbol DISPLAY</h2>
+    <img id="arbol" src="./../img/estructuras/arbol-1.jpg" alt="Arbol" style="width:100px">
+
+    <br>
+
+    <!--Boton que desaparece el arbol DISPLAY (display al ocultar la imagen no dispone el hueco que ocupaba la imagen)-->
+    <button class="pointer-crosshair"
+    onclick="document.getElementById('arbol').style.display='none'">Oculta el árbol</button>
+
+    <br>
+
+    <!--Boton que aparece el arbol DISPLAY-->
+    <button class="pointer-crosshair"
+    onclick="document.getElementById('arbol').style.display='block'">Muestra el árbol</button>
+
+    <br>
+
+    <!--Boton que desaparece el arbol HIDDEN (hidden al ocultar la imagen sí  dispone el hueco que ocupaba la imagen)-->
+    <p class="parrafo1">Desaparecer el arbol HIDDEN</p>
+
+    <img id="arbol2" src="./../img/estructuras/arbol-navidad.jpg" alt="Arbol Navidad" style="width:100px">
+
+    <button
+        onclick="const arbol = document.getElementById('arbol2');
+        arbol.hidden = !arbol.hidden; /*Alterna la visibilidad con true/false*/
+        this.innerHTML = arbol.hidden ? 'Mostrar árbol' : 'Quitar árbol'; /*Cambia el texto*/">Quita arbol</button>
+
+    <br>
+
+    <!--TEORIA DOM-->
+    <h2>¿Qué es el DOM?</h2>
+
+    <p>El DOM (Document Object Model) es la representación en forma de árbol de tu página web que el navegador crea para que los programadores puedan leer, modificar y manipular el contenido de forma dinámica con JavaScript</p>
+
+    <h3>Ejemplo de funcionamiento:</h3>
+    
+    <!--Contiene etiquetas como caracteres especiales-->
+    <p>  
+        Cuando un navegador web carga una página HTML, crea internamente una representación en memoria de esa página. Esta representación es el DOM y sigue una estructura jerárquica de árbol.
+        Documento: Es el nodo raíz del árbol, que representa toda la página web.
+        Elementos: Cada etiqueta HTML (como &lt;body &gt;, &lt;h1&gt; , &lt;div&gt;, &lt;p&gt;) se convierte en un objeto, o nodo, dentro del árbol.
+        Atributos: Los atributos de las etiquetas (id, class, src, etc.) también se representan como nodos.
+        Contenido de texto: El texto dentro de las etiquetas también es un nodo.
+        <br>
+        ¿Para qué sirve?
+        <br>
+        El DOM actúa como un puente entre la página web estática y el código de programación, permitiendo que los desarrolladores:
+        Modifiquen el contenido: Actualicen textos o imágenes sin recargar la página.
+        Cambien la estructura: Añadan, eliminen o reordenen elementos HTML.
+        Alteran el estilo: Cambien las propiedades CSS para modificar la apariencia de los elementos.
+        Manejen eventos: Reaccionen a las interacciones del usuario, como clics en botones o entradas de texto.
+        Ejemplo de manipulación del DOM
+        Imagina un documento HTML simple:
+        html
+        &lt;!DOCTYPE html&gt;
+        <br>
+        &lt;html&gt;
+        <br>
+        &lt;body&gt;
+        <br>
+        &lt;h1 id="titulo"&gt; Hola, mundo &lt;/h1&gt;
+        <br>
+        &lt;/body&gt;
+        <br>
+        &lt;/html&gt;
+        <br>
+        Usa el código con precaución.
+        <br>
+        Con JavaScript, podrías manipular este documento a través del DOM de la siguiente manera:
+        javascript
+        // Acceder al elemento con el id "titulo"
+        const tituloElemento = document.getElementById('titulo');
+        <br>
+        // Modificar el contenido del elemento
+        tituloElemento.textContent = '¡Hola, desde JavaScript!';
+        <br>
+        // Crear un nuevo párrafo
+        const nuevoParrafo = document.createElement('p');
+        nuevoParrafo.textContent = 'Este párrafo ha sido añadido con JavaScript.';
+        <br>
+        // Añadir el nuevo párrafo al cuerpo del documento
+        document.body.appendChild(nuevoParrafo);
+        Usa el código con precaución.
+        <br>
+        Este código permite modificar el contenido del &lt;h1&gt; y añadir un nuevo &lt;p&gt; sin necesidad de recargar la página, haciendo que el sitio web sea interactivo y dinámico.
+        &lt;/p&gt;
+        <br>
+        &lt;/body&gt;
+        &lt;/html&gt;
+        <br>
+        <br>
+        ETIQUETA COMMAND
+        <br>
+        En HTML5, la etiqueta &lt;command&gt; representa una acción que el usuario puede ejecutar, como un botón o una opción de menú, aunque esta etiqueta está obsoleta y ya no se usa en versiones modernas de HTML; su funcionalidad se maneja ahora principalmente con JavaScript y elementos como &lt;button&gt; o &lt;input type="button"&gt;, combinando HTML para estructura y JavaScript para el comportamiento interactivo. 
+        <br>
+        <br>
+        Concepto original de &lt;command&gt; (HTML5):
+        <br>
+        Propósito: Definir un comando que un usuario podría invocar, a menudo dentro de un &lt;menu&gt; o como un atajo de teclado.
+        <br>
+        Uso: Se usaba para crear botones, opciones de menú, casillas de verificación o botones de radio que ejecutaban funciones específicas.
+        Atributos comunes: type (command, radio, checkbox), label, icon, disabled, checked. 
+    </p>
+
+    <!--TEORIA JAVASCRIPT-->
+    <h2>¿Qué es JavaScript?</h2>
+
+    <p>JavaScript es el lenguaje que da vida a las páginas web: permite que respondan a los usuarios, se actualicen automáticamente y ofrezcan experiencias dinámicas y modernas</p>
+
+    <br>
+
+    <!--Boton para cambiar aspecto del parrafo-->
+    <!--getElementsByTagName: devuelve una coleccion de elementos, accedere a cada elemento segun la posicion-->
+   
+    <button onclick="
+
+        /*
+        document.getElementsByTagName('p')[0].style.color='green';
+        document.getElementsByTagName('p')[0].style.fontSize='20px';
+        document.getElementsByTagName('p')[0].style.fontWeight='bold'; negrita, css: font-weight: bold;
+        document.getElementsByTagName('p')[0].style.fontStyle='italic'; cursiva, css: font-style: italic;
+        */
+
+        /*declaro la constante parrafo0*/
+        const parrafo0 = document.getElementsByTagName('p')[0];
+        parrafo0.style.color='green';
+        parrafo0.style.fontSize='20px';
+        parrafo0.style.fontWeight='bold';
+        parrafo0.style.fontStyle='italic';
+
+        /*aplicar estilos con una clase eliminando las clases anteriores
+        document.getElementsByTagName('p')[1].className='clase-coleccion';*/
+
+        /*añadir una clase sin eliminar las anteriores*/
+        document.getElementsByTagName('p')[1].classList.add ('clase-coleccion');
+
+    ">Cambia el primer párrafo</button>
+    
+
+
+    <p id="parrafo-a-cambiar">Este es el párrafo cuyo aspecto cambiará.</p>
+
+    <button onclick="cambiarEstilosGlobales()">Cambia el aspecto de todos los párrafos</button>
+
+    <script>
+        function cambiarEstilosGlobales() {
+        // Selecciona TODOS los elementos <p> y los guarda en una lista (NodeList)
+        const parrafos = document.querySelectorAll('p');
+        // Itera sobre cada elemento individualmente para aplicar los estilos
+        parrafos.forEach(parrafo => {
+        parrafo.style.color = 'blue';
+        parrafo.style.fontSize = '15px';
+        parrafo.style.fontWeight = 'bold';
+        parrafo.style.fontStyle = 'italic';
+        });
+        }
+    </script>
+
+</body>
+</html>

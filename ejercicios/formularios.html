@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+
+    <!--css externo-->
+    <link rel="stylesheet" href="./../css/ejercicio-formularios.css">
+</head>
+
+<body>
+
+    <h1>FORMULARIO</h1>
+
+    <!--Solo si es válido, limpia el formulario -->
+    <form id="Contacto" class="form-container" onsubmit="validarYLimpiar(event)">
+
+        <div class="form-title">Datos Personales</div>
+
+        <!--nombre-->
+        <label>Nombre:</label>
+        <!--regla validacion campo nombre-->
+            <input type="text" pattern="[A-Za-z\s]{2,}" placeholder="Escribe tu nombre" required>
+        
+        <!--apellido 1-->
+        <label>Primer apellido:</label>
+        <!--regla validacion campo apellido-->
+            <input type="text" pattern="[A-Za-z\s]{2,}" placeholder="Escribe tu primer apellido" required>
+        
+        <!--apellido 2-->
+        <label>Segundo apellido:</label>
+        <!--regla validacion campo apellido-->
+            <input type="text" pattern="[A-Za-z\s]{2,}" placeholder="Escribe tu segundo apellido" required>
+        
+        <!--dni-->
+        <label>DNI (00000000A):</label>
+        <!--regla validacion campo dni-->
+            <input type="text" pattern="[0-9]{8}[A-Za-z]" placeholder="12345678A" required>
+
+        <!--tlf-->
+        <label>Teléfono:</label>
+        <!--regla validacion tlf-->
+            <input type="tel" pattern="[0-9]{9}" placeholder="Introduce 9 dígitos" required>
+
+        <!--desplegable con comunidades para seleccionar provincia-->
+        <label>Comunidad y provincia:</label>
+            <select required>
+
+                <!--selector provincias Extremadura-->
+                <optgroup label="Extremadura">
+                    <option>Badajoz</option>
+                    <option>Cáceres</option>
+                </optgroup>
+                <!--selector provincias cvalenciana-->
+                <optgroup label="Comunidad Valenciana">
+                    <option>Alicante</option>
+                    <option>Castellón</option>
+                    <option>Valencia</option>
+                </optgroup>
+                <!--selector Madrid-->
+                <optgroup label="Comunidad de Madrid">
+                    <option>Madrid</option>
+                </optgroup>
+            </select>
+
+        <!--genero, solo seleccionar uno u otro, para ello esta dentro de un grupo ambos, si no nos permite seleccionar mas de 1-->
+        <label>Género:</label>
+            <input type="radio" name="genero" required> Hombre 
+            <input type="radio" name="genero" required> Mujer
+
+        <!--casillas, seleccionar mas de una opcion-->
+        <label>Preferencias en tiempo libre:</label>
+            <input type="checkbox"> Deportes
+        <br>
+            <input type="checkbox"> Música
+        <br>
+            <input type="checkbox"> Cine
+
+        <!--textarea para escribir texto largo, minimo 10 caracteres-->
+        <label>Descripción (mínimo 10 caracteres):</label>
+        <!--regla de longitud minima requerida-->
+            <textarea minlength="10" required></textarea>
+
+        <!--comentario para escribir mas texto-->
+        <label>Comentario:</label>
+        <!--muestra escribe aqui antes de que usuario escriba algo-->
+            <input type="text" value="Escribe aquí...">
+
+        <!--boton para borrar formulario-->
+        <button type="submit">Borrar</button>
+    </form>
+
+    <!--script JavaScript para borrar formulario y reestablecer si todo es correcto-->
+    <script>
+        function validarYLimpiar(event) {
+            const form = event.target; //El formulario que se está enviando
+
+            //comprobamos si es válido
+            if (form.checkValidity()) {
+                event.preventDefault(); // Evita envio real
+
+                // Limpiar el formulario, funcion deseada del boton
+                form.reset();
+
+                // Restaurar el valor del comentario
+                const comentario = form.querySelector('input[type="text"]');
+                if (comentario) {
+                    comentario.value = "Escribe aquí...";
+                }
+
+                alert("Formulario borrado correctamente.");
+            }
+            //Si no es valido el navegador ya muestra los errores
+        }
+    </script>
+
+    <button 
+        onclick= "window.alert('Hola, buenos dias')"
+        alt="Saludo con document.write" 
+        title="Saludo con document.write">Saludo
+    </button>
+
+    <button    
+        onclick= "document.write('Hola, buenos dias')" 
+        alt="Saludo con document.write" 
+        title="Saludo con document.write">Saludo
+    </button>
+
+</body>
+</html>

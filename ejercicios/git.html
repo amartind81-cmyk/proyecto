@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Git</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="Andres">
+    <meta name="Description" content="pagina de git">
+    <meta name="Keywords" content="HTML, CSS, jQuery, git">
+    <link rel="shortcut icon" href="imagen/favicon.jpg"  type="image/x-icon">
+
+
+
+<!-- ESTILOS -->
+<link rel="stylesheet" href="css/estilos1.css">
+<link rel="stylesheet" href="css/estilos2.css">
+
+
+<style>
+p{font-size: 14px;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+.estiloHead {color:aqua;
+         font-size: 60px;}
+</style>
+
+
+<link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+<!--
+
+es un estándar creado por que permite que tu sitio web controle cuando alguien comparte tu enlace en redes sociales o apps de mensajería.
+
+Es decir: cuando pones un link en , etc., y aparece:
+
+✅ Una imagen
+
+✅ Un título
+
+✅ Una descripción
+
+Eso se genera gracias a .
+-->
+<!-- ✅ Open Graph (Facebook, LinkedIn, Instagram, Messenger, WhatsApp) -->
+<meta property="og:title" content="EDteam - Educación con honestidad">
+<meta property="og:description" content="Cursos online para aprender tecnología y transformar tu carrera desde cero.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ed.team/"&gt;>
+<meta property="og:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg"&gt;>
+<meta property="og:site_name" content="EDteam">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- ✅ Twitter Card (X) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EDteam - Educación con honestidad">
+<meta name="twitter:description" content="Cursos online para aprender tecnología y transformar tu carrera desde cero.">
+<meta name="twitter:image" content="https://drupal.ed.team/sites/default/files/inline-images/EDteam-card.jpg"&gt;>
+<meta name="twitter:site" content="@edteamlat"> <!-- Si quieren, se puede quitar -->
+
+<!-- ✅ SEO estándar -->
+<meta name="description" content="Cursos online para aprender programación, diseño, negocios digitales y más, con educación honesta y accesible para todos.">
+<meta name="theme-color" content="#4CAF50">
+
+
+<script src="main.js"></script>
+<script>
+</script>
+</head>
+
+<body>
+    <a href="https://iesdonosocortes.educarex.es/" title="IES Donoso Cortés" target="_self">IES Donoso Cortés</a>
+        <p style="font-size: 15px">
+            Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia, la confiabilidad y compatibilidad del mantenimiento de versiones de aplicaciones informáticas cuando estas tienen un gran número de archivos de código fuente. Su propósito es llevar registro de los cambios en archivos de computadora incluyendo coordinar el trabajo que varias personas realizan sobre archivos compartidos en un repositorio de código.
+
+            Al principio, Git se pensó como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT.[1]​ Sin embargo, Git se ha convertido desde entonces en un sistema de control de versiones con funcionalidad plena.[2]​ Hay algunos proyectos de mucha relevancia que ya usan Git, en particular, el grupo de programación del núcleo Linux.
+
+            El mantenimiento del software Git está actualmente (2009) supervisado por Junio Hamano, quien recibe contribuciones al código de alrededor de 280 programadores. En cuanto a derechos de autor Git es un software libre distribuible bajo los términos de la versión 2 de la Licencia Pública General de GNU.
+
+            Historia
+            El desarrollo de Git fue iniciado por Linus Torvalds en abril de 2005 después que la licencia gratuita de BitKeeper, el sistema propietario de control de versiones usado en el desarrollo del kernel de Linux desde 2002, fue revocada para Linux. El titular del copyright de Bitkepper, Larry McVoy, afirmó que Andrew Tridgell había creado Source Puller utilizando ingeniería inversa a partir de los protocolos de BitKeeper.
+
+            Características
+            El diseño de Git se basó en BitKeeper y en Monotone.[3]​[4]​ Originalmente fue diseñado como un motor de sistema de control de versiones de bajo nivel sobre el cual otros podrían codificar interfaces frontales, tales como Cogito o StGIT.[5]​ Desde ese entonces hasta ahora el núcleo del proyecto Git se ha vuelto un sistema de control de versiones completo, utilizable en forma directa.[6]​
+
+            Linus Torvalds buscaba un sistema distribuido que pudiera usar en forma semejante a BitKeeper, pero ninguno de los sistemas bajo software libre disponibles cumplía con sus requerimientos, especialmente en cuanto a desempeño. El diseño de Git mantiene una enorme cantidad de código distribuida y gestionada por mucha gente, que incide en numerosos detalles de rendimiento, y de la necesidad de rapidez en una primera implementación.
+
+            Entre las características más relevantes se encuentran:
+
+            Fuerte apoyo al desarrollo no lineal, por ende rapidez en la gestión de ramas y mezclado de diferentes versiones. Git incluye herramientas específicas para navegar y visualizar un historial de desarrollo no lineal. Una presunción fundamental en Git, es que un cambio será fusionado mucho más frecuentemente de lo que se escribe originalmente, conforme se pasa entre varios programadores que lo revisan.
+            Gestión distribuida. Al igual que Darcs, BitKeeper, Mercurial, SVK, Bazaar y Monotone, Git le da a cada programador una copia local del historial del desarrollo entero, y los cambios se propagan entre los repositorios locales. Los cambios se importan como ramas adicionales y pueden ser fusionados en la misma manera que se hace con la rama local.
+            Los almacenes de información pueden publicarse por HTTP, FTP, rsync o mediante un protocolo nativo, ya sea a través de una conexión TCP/IP simple o a través de cifrado SSH. Git también puede emular servidores CVS, lo que habilita el uso de clientes CVS preexistentes y módulos IDE para CVS preexistentes en el acceso de repositorios Git.
+            Los repositorios Subversion y svk se pueden usar directamente con git-svn.
+            Gestión eficiente de proyectos grandes, dada la rapidez de gestión de diferencias entre archivos, entre otras mejoras de optimización de velocidad de ejecución.
+            Todas las versiones previas a un cambio determinado, implican la notificación de un cambio posterior en cualquiera de ellas a ese cambio (denominado autenticación criptográfica de historial). Esto existía en Monotone.
+            Resulta algo más caro trabajar con ficheros concretos frente a proyectos, eso diferencia el trabajo frente a CVS, que trabaja con base en cambios de fichero, pero mejora el trabajo con afectaciones de código que concurren en operaciones similares en varios archivos.
+            Los renombrados se trabajan basándose en similitudes entre ficheros, aparte de nombres de ficheros, pero no se hacen marcas explícitas de cambios de nombre con base en supuestos nombres únicos de nodos de sistema de ficheros, lo que evita posibles y desastrosas coincidencias de ficheros diferentes en un único nombre.
+            Realmacenamiento periódico en paquetes (ficheros). Esto es relativamente eficiente para escritura de cambios y relativamente ineficiente para lectura si el reempaquetado (con base en diferencias) no ocurre cada cierto tiempo.
+            Compatibilidad con Github y Microsoft Visual Studio Code
+        </p>
+
+    <p>Git es un sistema de control de versiones distribuido y de código abierto que se utiliza principalmente para gestionar el historial de cambios en archivos de código fuente, permitiendo que múltiples desarrolladores colaboren en un proyecto de manera simultánea. Su arquitectura distribuida significa que cada colaborador tiene una copia completa del repositorio, lo que facilita el trabajo offline y permite revertir cambios fácilmente.</p>
+
+    <details name="grupo">
+        <summary>¿Qué es Open Graph?</summary>
+            <p>Open Graph es un protocolo de marcado web creado por Facebook que permite controlar cómo se muestran los enlaces web en las redes sociales. Se implementa mediante etiquetas HTML en el código de una página para especificar información como el título, la descripción, la imagen y el tipo de contenido. Cuando se comparte un enlace, las redes sociales como Facebook, Instagram, WhatsApp, LinkedIn o Discord utilizan estas etiquetas para generar una vista previa atractiva y completa del contenido.</p>
+    </details>
+
+    <details name="grupo">
+        <summary>¿Qué es SEO?</summary>
+            <p>SEO son las siglas en inglés de "Optimización para Motores de Búsqueda" (\(SearchEngineOptimization\)) y se refiere al conjunto de técnicas para mejorar la visibilidad de un sitio web en los resultados orgánicos y gratuitos de buscadores como Google. El objetivo es aumentar el tráfico de calidad hacia una página, optimizando aspectos como el contenido, la estructura técnica, y la autoridad del sitio, para que aparezca en las primeras posiciones de los resultados de búsqueda.</p>
+    </details>
+
+
+    <!--google maps-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.338955560239!2d-5.869492723848107!3d38.96192764289364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd145b0335e1715b%3A0x485f02fe56f2d511!2sIES%20Donoso%20Cort%C3%A9s!5e0!3m2!1ses!2ses!4v1762945704816!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+</body>
+</html>

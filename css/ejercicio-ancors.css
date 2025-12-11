@@ -1,0 +1,17 @@
+        *{
+            scroll-behavior: smooth;
+        }
+        a{
+            display: block;
+        }
+       
+        .bolita{
+                background-color: red;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                position: relative;
+                left: calc(50vw - 150px);
+                top: calc(50vh -150px);
+                opacity: 50%;
+        }
